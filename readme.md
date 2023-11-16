@@ -1,25 +1,27 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/2QQD_9SK)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=12909704&assignment_repo_type=AssignmentRepo)
-# useReducer
+# React + TypeScript + Vite
 
--   You compulsarily have to use `useReducer` hook.
--   You can install dependencies like React Router, Styling Libraries, etc if needed.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Question: Todo List
+Currently, two official plugins are available:
 
-1. Create a React App: Set up a new React application using create-react-app or your preferred method. Also set up styles with your preferred choice.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-2. Set up a useReducer function to manage the state of the todo list. Define actions for adding, marking as complete, and removing todos.
+## Expanding the ESLint configuration
 
-3. Create the user interface with your choice for the todo list, allowing users to add new todos, mark them as complete, and remove them.
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-4. Dispatch actions to the reducer based on user interactions to update the state of the todo list.
+- Configure the top-level `parserOptions` property like this:
 
-## Basic Todo Object:
+```js
+   parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+   },
+```
 
-    todo: {
-        task: "Learn Angular.js",
-        isComplete: false
-    }
-
--   You can add more fields if you want to.
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
